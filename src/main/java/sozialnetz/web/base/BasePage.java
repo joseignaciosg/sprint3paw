@@ -18,6 +18,5 @@ public class BasePage extends WebPage {
 		}else{
 			add(new LoggedHeaderPanel("headerPanel"));
 		}
-		add(new Label("username", new PropertyModel<String>(SozialneztSession.get(), "username")));
 	}
 }

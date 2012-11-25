@@ -6,8 +6,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Sozialnetz</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
 <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
 <link href="assets/css/custom_style.css" rel="stylesheet"
 	type="text/css" />
@@ -23,7 +21,9 @@
 <body>
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
-			<div wicket:id="headerPanel"/>
+			<div class="container">
+				<div wicket:id="headerPanel" />
+			</div>
 		</div>
 	</div>
 	<div class="container" id="errors">
@@ -32,12 +32,10 @@
 	<div class="container" id="success">
 		<!-- 		<jsp:include page="success.jsp"></jsp:include> -->
 	</div>
-	<div class="container" id="main"></div>
+	<div class="container" id="main">
 
-	<h2 style="float: right;">
-		<wicket:message key="currentUser">currentUser</wicket:message>
-		: <span wicket:id="username">guest</span>
-	</h2>
-	<wicket:child />
+		<wicket:child />
+
+	</div>
 </body>
 </html>
