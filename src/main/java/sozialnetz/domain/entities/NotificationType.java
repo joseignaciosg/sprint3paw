@@ -1,0 +1,7 @@
+package sozialnetz.domain.entities;
+
+public enum NotificationType {
+	PETITION, ACEPTATION, LIKE, STATEUPDATE, COMMENT, 
+	COMMENTSHARE, EVENTINVITATION, COMMENTOPUB, MUTUALFRIEND;
+
+}

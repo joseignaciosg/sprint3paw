@@ -32,7 +32,7 @@
 
 	<servlet>
 		<servlet-name>HomeRedirector</servlet-name>
-		<servlet-class>web.common.HomeRedirectServlet</servlet-class>
+		<servlet-class>sozialnetz.web.common.HomeRedirectServlet</servlet-class>
 		<init-param>
 			<param-name>homeUrl</param-name>
 			<param-value>bin/</param-value>

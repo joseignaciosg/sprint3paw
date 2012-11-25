@@ -34,7 +34,7 @@
 		</property>
 		<property name="packagesToScan">
 			<list>
-				<value>domain</value>
+				<value>sozialnetz.domain</value>
 			</list>
 		</property>
 	</bean>
