@@ -4,8 +4,11 @@ import org.apache.wicket.Session;
 import org.apache.wicket.protocol.http.WebSession;
 import org.apache.wicket.request.Request;
 
-public class SozialneztSession extends WebSession {
+import repositories.api.UserRepo;
+import domain.entities.User;
 
+public class SozialneztSession extends WebSession {
+	private static final long serialVersionUID = 1L;
 	private String username;
 
 	public static SozialneztSession get() {
@@ -20,7 +23,12 @@ public class SozialneztSession extends WebSession {
 		return username;
 	}
 
-	public boolean signIn(String username, String password) {
+	public boolean signIn(String username, String password, UserRepo userRepo) {
+		User user = userRepo.getByNick(username);
+		if (user != null && user.getPassword().equals(password)) {
+			this.username = username;
+			return true;
+		}
 		return false;
 	}
 
@@ -29,7 +37,7 @@ public class SozialneztSession extends WebSession {
 	}
 
 	public void signOut() {
-        invalidate();
-        clear();
+		invalidate();
+		clear();
 	}
 }
