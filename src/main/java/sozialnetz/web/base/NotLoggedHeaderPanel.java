@@ -8,8 +8,8 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 
 import sozialnetz.domain.repositories.api.UserRepo;
-import sozialnetz.web.ProfilePage;
 import sozialnetz.web.SozialneztSession;
+import sozialnetz.web.user.ProfilePage;
 
 public class NotLoggedHeaderPanel extends Panel {
 

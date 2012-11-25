@@ -1,31 +1,39 @@
-<a class="brand" href='${ basePath }/profile/profile'> SozialNetz </a>
-<ul class="nav pull-right">
-	<form action="${ basePath }/user/search"
-		class="navbar-search pull-left" method="GET">
-		<button type="button"
-			class="btn btn-mini btn-primar btn-success pull-left">
-			<p style="color: white">
-				<a href="${ basePath }/user/friendSuggest"> Sugerencias de
-					Amigos</a>
-			</p>
-		</button>
-		<button type="button"
-			class="btn btn-mini btn-primar btn-success pull-left">
-			<p style="color: white">
-				<a href="${ basePath }/profile/notifications">Ver Notificationes</a>
-			</p>
-		</button>
-		<button type="button"
-			class="btn btn-mini btn-primar btn-success pull-left">
-			<p style="color: white">
-				<a href="${ basePath }/event/upcomingEvents"> Ver Eventos
-					Futuros</a>
-			</p>
-		</button>
-		<input type="text" name="pattern" class="search-query"
-			placeholder="Search"> <input type="submit"
-			class="btn btn-primary" value="Go!" /> <a class="btn btn-primary"
-			href="${ basePath }/user/logout">Salir</a>
-	</form>
+<html>
+<body>
+	<wicket:panel>
+		<a class="brand" href='${ basePath }/profile/profile'> SozialNetz
+		</a>
+		<ul class="nav pull-right">
+			<form action="${ basePath }/user/search"
+				class="navbar-search pull-left" method="GET">
+				<button type="button"
+					class="btn btn-mini btn-primar btn-success pull-left">
+					<p style="color: white">
+						<a href="${ basePath }/user/friendSuggest"> Sugerencias de
+							Amigos</a>
+					</p>
+				</button>
+				<button type="button"
+					class="btn btn-mini btn-primar btn-success pull-left">
+					<p style="color: white">
+						<a href="${ basePath }/profile/notifications">Ver
+							Notificationes</a>
+					</p>
+				</button>
+				<button type="button"
+					class="btn btn-mini btn-primar btn-success pull-left">
+					<p style="color: white">
+						<a href="${ basePath }/event/upcomingEvents"> Ver Eventos
+							Futuros</a>
+					</p>
+				</button>
+				<input type="text" name="pattern" class="search-query"
+					placeholder="Search"> <input type="submit"
+					class="btn btn-primary" value="Go!" /> <a class="btn btn-primary"
+					href="${ basePath }/user/logout">Salir</a>
+			</form>
 
-</ul>
+		</ul>
+	</wicket:panel>
+</body>
+</html>

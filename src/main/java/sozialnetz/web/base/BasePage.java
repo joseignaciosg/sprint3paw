@@ -13,7 +13,8 @@ public class BasePage extends WebPage {
 
 	public BasePage() {
 		boolean logged = false;
-		if(!logged){
+		SozialneztSession session = (SozialneztSession)getSession();
+		if(!session.isSignedIn()){
 			add(new NotLoggedHeaderPanel("headerPanel"));
 		}else{
 			add(new LoggedHeaderPanel("headerPanel"));
