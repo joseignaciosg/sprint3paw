@@ -1,0 +1,20 @@
+<html>
+	<body>
+		<wicket:extend>
+			<h3><wicket:message key="page.subtitle"></wicket:message></h3>
+
+			<div wicket:id="feedback" class="formErrors"/>
+			<form wicket:id="loginForm">
+				<div>
+					<label><wicket:message key="username">Username</wicket:message>:</label>
+					<input type="text" wicket:id="username" />
+				</div>
+				<div>
+					<label><wicket:message key="password">Password</wicket:message>:</label>
+					<input type="password" wicket:id="password" />
+				</div>
+				<input type="submit" wicket:id="login" />
+			</form>
+		</wicket:extend>
+	</body>
+</html>
