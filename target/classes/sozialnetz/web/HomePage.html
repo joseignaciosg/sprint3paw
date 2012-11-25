@@ -1,9 +1,101 @@
 <html>
-	<body>
-		<wicket:extend>
-			<h2>Ejemplos:</h2>
-			<ul>
-			</ul>
-		</wicket:extend>
-	</body>
+<body>
+	<wicket:extend>
+		<table>
+			<tr>
+				<td>
+					<div class="hero-unit" style="text-align: center;">
+						<h1>SozialNetz</h1>
+						<br />
+						<p>Deines Sozial Netz.</p>
+					</div>
+					<p align="center">
+						<a class="btn btn-primary btn-large"
+							href="${ basePath }/user/passChange" style="align: center;">
+							Olvido su contraseña? </a>
+					</p>
+				</td>
+
+				<td>
+					<div>
+						<form:form class="form-horizontal span8 offset2" method="POST"
+							commandName="registrationForm" action="../index/index">
+							<form:errors path="*" />
+							<fieldset>
+								<legend>Registrarse</legend>
+								<div class="control-group">
+									<label class="control-label" for="user_nickname">Nombre
+										de Usuario</label>
+									<div class="controls">
+										<form:input type="text" class="input-xlarge"
+											id="user_nickname" name="nickname" path="nickname"
+											value="${ registrationForm.nickname }" />
+										<p class="help-block">Su nombre de usuario para ingresar
+											al sitio</p>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="user_password">Contraseña</label>
+									<div class="controls">
+										<form:input type="password" class="input-xlarge"
+											id="user_password" name="password" path="password"
+											value="${registrationForm.password}" />
+										<p class="help-block">Su contraseña para ingreso al sitio</p>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="user_repeatedPassword">Repetir
+										contraseña</label>
+									<div class="controls">
+										<form:input type="password" class="input-xlarge"
+											id="user_repeatedPassword" name="repeatedPassword"
+											path="repeatedPassword"
+											value="${registrationForm.repeatedPassword}" />
+										<p class="help-block">Repitala para evitar errores</p>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="user_email">Email</label>
+									<div class="controls">
+										<form:input type="text" class="input-xlarge" id="user_email"
+											name="email" path="email" value="${registrationForm.email}" />
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="user_first_name">Nombre</label>
+									<div class="controls">
+										<form:input type="text" class="input-xlarge"
+											id="user_firstName" name="firstName" path="firstName"
+											value="${registrationForm.firstName}" />
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="user_last_name">Apellido</label>
+									<div class="controls">
+										<form:input type="text" class="input-xlarge"
+											id="user_lastName" name="lastName" path="lastName"
+											value="${registrationsForm.lastName}" />
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="user_birthdate">Fecha
+										de Nacimiento</label>
+									<div class="controls">
+										<form:input type="text" class="input-xlarge"
+											id="user_birthdate" name="date" path="date"
+											placeholder="dd/mm/aaaa" value="${registrationsForm.date}" />
+									</div>
+								</div>
+								<div class="form-actions">
+									<input type="submit" class="btn btn-primary"
+										value="Registrarse" />
+								</div>
+							</fieldset>
+						</form:form>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</wicket:extend>
+</body>
 </html>
