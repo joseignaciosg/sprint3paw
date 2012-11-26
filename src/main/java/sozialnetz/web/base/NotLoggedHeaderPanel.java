@@ -32,7 +32,8 @@ public class NotLoggedHeaderPanel extends Panel {
 				SozialneztSession session = SozialneztSession.get();
 				if (session.signIn(username, password, userRepo)) {
 					if (!continueToOriginalDestination()) {
-						setResponsePage(new ProfilePage(new PageParameters().add("username", username)));
+						setResponsePage(new ProfilePage(
+								new PageParameters().add("username", username)));
 					}
 				} else {
 					error(getString("invalidCredentials"));
