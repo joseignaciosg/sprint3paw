@@ -5,6 +5,7 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.model.PropertyModel;
 
 import sozialnetz.web.SozialneztSession;
+import sozialnetz.web.user.ProfileLinkPanel;
 
 
 public class BasePage extends WebPage {
@@ -19,5 +20,6 @@ public class BasePage extends WebPage {
 		}else{
 			add(new LoggedHeaderPanel("headerPanel"));
 		}
+		
 	}
 }

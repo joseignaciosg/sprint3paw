@@ -11,7 +11,9 @@ public class StateUpdatePanel extends Panel {
 	public StateUpdatePanel(String id, StateUpdate update) {
 		super(id);
 		add(new Label("stateUpdateText", update.getText()));
-		
+		boolean isCurrent = update.getOwner().equals(update.getFrom());
+		add(new Label("from", update.getFrom().getUsername() + " publicó en el muro:").setVisible(!isCurrent));
+	
 	}
 
 }
