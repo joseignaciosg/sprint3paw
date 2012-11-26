@@ -8,15 +8,15 @@ import sozialnetz.domain.entities.User;
 import sozialnetz.domain.repositories.api.UserRepo;
 
 
-public class SozialneztSession extends WebSession {
+public class SozialnetzSession extends WebSession {
 	private static final long serialVersionUID = 1L;
 	private String username;
 
-	public static SozialneztSession get() {
-		return (SozialneztSession) Session.get();
+	public static SozialnetzSession get() {
+		return (SozialnetzSession) Session.get();
 	}
 
-	public SozialneztSession(Request request) {
+	public SozialnetzSession(Request request) {
 		super(request);
 	}
 

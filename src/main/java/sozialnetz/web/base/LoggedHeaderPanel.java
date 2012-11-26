@@ -5,7 +5,7 @@ import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 import sozialnetz.domain.entities.User;
-import sozialnetz.web.SozialneztSession;
+import sozialnetz.web.SozialnetzSession;
 import sozialnetz.web.user.ProfilePage;
 
 @SuppressWarnings("serial")
@@ -31,8 +31,8 @@ public class LoggedHeaderPanel extends Panel {
 		});
 	}
 
-	protected SozialneztSession getSozialneztSession() {
-		return (SozialneztSession) getSession();
+	protected SozialnetzSession getSozialneztSession() {
+		return (SozialnetzSession) getSession();
 	}
 
 }

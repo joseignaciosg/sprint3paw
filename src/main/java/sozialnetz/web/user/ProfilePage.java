@@ -14,24 +14,24 @@ import org.apache.wicket.util.string.StringValue;
 import sozialnetz.domain.entities.User;
 import sozialnetz.domain.repositories.api.UserRepo;
 import sozialnetz.web.EntityModel;
-import sozialnetz.web.SozialneztSession;
+import sozialnetz.web.SozialnetzSession;
 import sozialnetz.web.base.SecuredPage;
 import sozialnetz.web.event.CreateEventPage;
 import sozialnetz.web.publication.PublicationPanel;
 
+@SuppressWarnings("serial")
 public class ProfilePage extends SecuredPage {
 
 	@SpringBean
 	private UserRepo userRepo;
 
-	private static final long serialVersionUID = 1L;
-
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public ProfilePage(PageParameters parameters) {
 
 		StringValue username = parameters.get("username");
 		final User user = userRepo.getByNick(username.toString());
         setDefaultModel(new CompoundPropertyModel(new EntityModel<User>(User.class, user)));
-		SozialneztSession session = (SozialneztSession) getSession();
+		SozialnetzSession session = (SozialnetzSession) getSession();
 		User currentUser = userRepo.getByNick(session.getUsername());
 
 		// profile user information
@@ -101,9 +101,7 @@ public class ProfilePage extends SecuredPage {
 				}));
 		
 		//adding publication form and list of publications 
-		PageParameters publicParams = new PageParameters();
-		publicParams.add("profileUser", user.getUsername());
-		add(new PublicationPanel("publicationPanel", publicParams));
+		add(new PublicationPanel("publicationPanel", getDefaultModel()));
 
 	}
 }

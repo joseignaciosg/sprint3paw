@@ -7,11 +7,10 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.ResourceModel;
-import org.apache.wicket.spring.injection.annot.SpringBean;
 
 import sozialnetz.web.base.BasePage;
 
-
+@SuppressWarnings("serial")
 public class LoginPage extends BasePage {
 
 	
@@ -23,7 +22,7 @@ public class LoginPage extends BasePage {
 		Form<LoginPage> form = new Form<LoginPage>("loginForm", new CompoundPropertyModel<LoginPage>(this)) {
 			@Override
 			protected void onSubmit() {
-				SozialneztSession session = SozialneztSession.get();
+				SozialnetzSession session = SozialnetzSession.get();
 			}
 		};
 

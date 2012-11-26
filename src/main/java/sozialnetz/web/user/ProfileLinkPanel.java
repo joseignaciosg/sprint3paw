@@ -8,6 +8,7 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 import sozialnetz.domain.entities.User;
 import sozialnetz.web.EntityModel;
 
+@SuppressWarnings("serial")
 public class ProfileLinkPanel extends Panel {
 
 	public ProfileLinkPanel(String id, User user) {

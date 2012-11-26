@@ -10,7 +10,7 @@ import org.apache.wicket.spring.injection.annot.SpringBean;
 
 import sozialnetz.domain.entities.User;
 import sozialnetz.domain.repositories.api.UserRepo;
-import sozialnetz.web.SozialneztSession;
+import sozialnetz.web.SozialnetzSession;
 import sozialnetz.web.user.ProfilePage;
 
 public class NotLoggedHeaderPanel extends Panel {
@@ -30,7 +30,7 @@ public class NotLoggedHeaderPanel extends Panel {
 						this)) {
 			@Override
 			public void onSubmit() {
-				SozialneztSession session = SozialneztSession.get();
+				SozialnetzSession session = SozialnetzSession.get();
 				if (session.signIn(username, password, userRepo)) {
 					if (!continueToOriginalDestination()) {
 						setResponsePage(new ProfilePage(

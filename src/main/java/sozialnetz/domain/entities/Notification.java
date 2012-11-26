@@ -22,7 +22,7 @@ public class Notification extends PersistentEntity implements
 	@Column(nullable = false)
 	private DateTime date;
 
-	@OneToOne(optional=false)
+	@OneToOne
 	private User from;
 
 	@ManyToOne(optional=false)

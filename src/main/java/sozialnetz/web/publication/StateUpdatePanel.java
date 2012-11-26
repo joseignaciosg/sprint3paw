@@ -13,7 +13,7 @@ public class StateUpdatePanel extends Panel {
 		add(new Label("stateUpdateText", update.getText()));
 		boolean isCurrent = update.getOwner().equals(update.getFrom());
 		add(new Label("from", update.getFrom().getUsername() + " publicó en el muro:").setVisible(!isCurrent));
-	
+		add(new LikePanel("likePanel", update.getOwner().getUsername(), update));
 	}
 
 }
