@@ -50,8 +50,8 @@
 
 				<!-- Para modificar la cantidad de días proximos de cumpleaños de amigos -->
 				<button type="button" class="btn pull-right"
-					wicket:id="editupcomingbirthdaynumber">Cambiar visibilidad de
-					cumpleaños</button>
+					wicket:id="editupcomingbirthdaynumber">Cambiar visibilidad
+					de cumpleaños</button>
 				<!-- 				</c:if> -->
 
 
@@ -96,12 +96,10 @@
 						<!-- 							<img height="120" width="160" class="photo" -->
 						<!-- 								src="${ basePath }/user/photo?nickname=${user.username}" /> -->
 						<!-- 						</c:if> -->
-						<br/>
+						<br />
 						<!-- 						<c:if test="${iscurrent}"> -->
 						<button type="button" class="btn btn-mini btn-primary"
-							id="editphoto">
-							Cambiar Imagen
-						</button>
+							wicket:id="editphoto">Cambiar Imagen</button>
 						<!-- 						</c:if> -->
 						<br /> <br /> <br /> <br /> <br /> <br /> <br />
 						<h3>Amigos</h3>
@@ -136,33 +134,33 @@
 						<table class="table table-striped">
 							<tr>
 								<td><b><span class="infoTitle"> Apodo: </span></b></td>
-								<td><c:out value="${user.username}" /></td>
+								<td wicket:id="username">apodo</td>
 							</tr>
 							<!-- 							<c:if test="${isfriend}"> -->
 							<tr>
 								<td><b><span class="infoTitle">Email:</span></b></td>
-								<td><c:out value="${user.email}" /></td>
+								<td wicket:id="email">email</td>
 							</tr>
 							<tr>
 								<td><b><span class="infoTitle">Cumplea&ntilde;os:</span></b></td>
-								<td><joda:format value="${user.birthday}"
-										pattern="dd MMM yyyy" /></td>
+								<td wicket:id="birthday">11/11/11</td>
 							</tr>
 							<!-- 							</c:if> -->
 						</table>
 						<!-- 						<c:if test="${iscurrent}"> -->
-						<button type="button" class="btn btn-mini btn-primary" id="edit">
-							<a href="../user/edit"><p style="color: white">Editar
+						<button type="button" class="btn btn-mini btn-primary"
+							wicket:id="editinformation">
+							<a href="#"><p style="color: white">Editar
 									Informaci&oacute;n</p></a>
 						</button>
 						<button type="button" class="btn btn-mini btn-primary"
-							id="editpass">
-							<a href="../user/editpass"><p style="color: white">Editar
+							wicket:id="editpass">
+							<a href="#"><p style="color: white">Editar
 									Contrase&ntilde;a</p></a>
 						</button>
 						<button type="button" class="btn btn-mini btn-primary"
-							id="editpass">
-							<a href="../event/create"><p style="color: white">Crear
+							wicket:id="createevent">
+							<a href="#"><p style="color: white">Crear
 									Evento</p></a>
 						</button>
 						<!-- 						</c:if> -->
@@ -356,7 +354,7 @@
 					</div>
 				</div>
 			</div>
-			</div>
+		</div>
 	</wicket:extend>
 </body>
 </html>
