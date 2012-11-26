@@ -33,6 +33,8 @@ public class ProfilePage extends SecuredPage {
 		User currentUser = userRepo.getByNick(session.getUsername());
 
 		// profile user information
+		add(new Label("currentUserName", user.getName()));
+		add(new Label("currentUserSurname", user.getSurname()));
 		add(new Label("currentUserUsername", user.getUsername()));
 		add(new Label("currentUserEmail", user.getEmail()));
 		add(new Label("currentUserBirthday", user.getBirthday().toString()));
