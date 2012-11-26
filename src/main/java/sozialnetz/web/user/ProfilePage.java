@@ -16,6 +16,8 @@ import sozialnetz.domain.repositories.api.UserRepo;
 import sozialnetz.web.EntityModel;
 import sozialnetz.web.SozialneztSession;
 import sozialnetz.web.base.SecuredPage;
+import sozialnetz.web.event.CreateEventPage;
+import sozialnetz.web.publication.PublicationPanel;
 
 public class ProfilePage extends SecuredPage {
 
@@ -97,6 +99,11 @@ public class ProfilePage extends SecuredPage {
 						return friendModel.getObject().getFriends();
 					}
 				}));
+		
+		//adding publication form and list of publications 
+		PageParameters publicParams = new PageParameters();
+		publicParams.add("profileUser", user.getUsername());
+		add(new PublicationPanel("publicationPanel", publicParams));
 
 	}
 }

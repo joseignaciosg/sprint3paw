@@ -18,7 +18,7 @@ public class StateUpdate extends Publication {
 
 	public static final int STATE_UPDATE_MAX_TEXT = 200;
 
-	@OneToOne(optional = false)
+	@OneToOne
 	private User from; // el que la hace
 
 	@Column(nullable = false, length = STATE_UPDATE_MAX_TEXT)

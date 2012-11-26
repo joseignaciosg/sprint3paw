@@ -1,4 +1,4 @@
-package sozialnetz.web.user;
+package sozialnetz.web.event;
 
 import sozialnetz.web.base.SecuredPage;
 

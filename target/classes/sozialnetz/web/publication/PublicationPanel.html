@@ -1,0 +1,29 @@
+<html>
+<body>
+	<wicket:panel>
+		<br />
+		<hr />
+		<h3>
+			<wicket:message key="newPublicationTitle">Login</wicket:message>
+		</h3>
+		<form wicket:id="publicationForm">
+			<input type="hidden" wicket:id="username" />
+			<textarea wicket:id="text" class="field span12" rows="3"
+				placeholder="ingrese aquí su publicación"></textarea>
+			<input type="submit" class="btn" value="Publicar!" />
+		</form>
+		<h3><wicket:message key="publicationListTitle">lista de publicationes</wicket:message></h3>
+		<div class="span12">
+			<table class="table table-hover table-striped">
+				<tr wicket:id="publication">
+					<td>
+						<div wicket:id="pubPanel" />
+						<div wicket:id="publicationDate" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</wicket:panel>
+
+</body>
+</html>

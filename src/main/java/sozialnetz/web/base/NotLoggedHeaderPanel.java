@@ -23,7 +23,6 @@ public class NotLoggedHeaderPanel extends Panel {
 
 	public NotLoggedHeaderPanel(String id) {
 		super(id);
-		// login form
 		Form<NotLoggedHeaderPanel> loginform = new Form<NotLoggedHeaderPanel>(
 				"loginform", new CompoundPropertyModel<NotLoggedHeaderPanel>(
 						this)) {

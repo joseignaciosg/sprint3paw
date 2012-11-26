@@ -1,0 +1,108 @@
+<html>
+<body>
+	<wicket:panel>
+<!-- 											<c:if test="${! (pub.publication.from eq user) }"> -->
+<!-- 												${pub.publication.from.username} publicó en el muro:  -->
+<!-- 											</c:if> -->
+<!-- 											<c:if test="${iscurrent}"> -->
+<!-- 												<form class="form pull-right" action="deletePublication" -->
+<!-- 													method="post"> -->
+<!-- 													<input type="hidden" name="nickname" -->
+<!-- 														value='<c:out value="${user.username}"/>' /> <input -->
+<!-- 														type="hidden" name="pub_id" -->
+<!-- 														value='<c:out value="${pub.publication.id}"/>' /> <input -->
+<!-- 														type="submit" value="eliminar" /> -->
+<!-- 												</form> -->
+<!-- 											</c:if> -->
+											<p class="lead">
+												<span wicket:id="stateUpdateText"/>
+<!-- 											<form class="form" method="post" action="newLike"> -->
+<!-- 												<input type="hidden" name="nickname" -->
+<!-- 													value='<c:out value="${user.username}"/>' /> <input -->
+<!-- 													type="hidden" name="pub_id" -->
+<!-- 													value='<c:out value="${pub.publication.id}"/>' /> -->
+<!-- 												<c:if test="${!pub.likedByUser}"> -->
+<!-- 													<button type="submit" -->
+<!-- 														class="btn btn-mini pull-right btn-success">Me -->
+<!-- 														gusta</button> -->
+<!-- 												</c:if> -->
+<!-- 												<c:if test="${pub.likedByUser}"> -->
+<!-- 													<span class="pull-right"><span -->
+<!-- 														class="label label-success">Te gusta</span></span> -->
+<!-- 												</c:if> -->
+<!-- 											</form> -->
+<!-- 											<form class="form" method="post" action="newShare"> -->
+<!-- 												<input type="hidden" name="nickname" -->
+<!-- 													value='<c:out value="${user.username}"/>' /> <input -->
+<!-- 													type="hidden" name="pub_id" -->
+<!-- 													value='<c:out value="${pub.publication.id}"/>' /> -->
+<!-- 												<c:if test="${!pub.sharedByUser}"> -->
+<!-- 													<button type="submit" -->
+<!-- 														class="btn btn-mini pull-right btn-success">Compartir</button> -->
+<!-- 												</c:if> -->
+<!-- 												<c:if test="${pub.sharedByUser}"> -->
+<!-- 													<span class="pull-right"><span -->
+<!-- 														class="label label-success">Compartida</span></span> -->
+<!-- 												</c:if> -->
+<!-- 											</form> -->
+
+<!-- 											<c:if test="${not empty pub.publication.interests}"> -->
+<!-- 													Le gusta esta publicaci&oacute;n a: -->
+<!-- 													<c:forEach var="interest" -->
+<!-- 													items="${pub.publication.interests}" varStatus="status"> -->
+<!-- 													<c:if test="${interest.type == 'LIKE'}"> -->
+<!-- 														<a -->
+<!-- 															href='<c:out value="profile?nickname=${interest.owner.username}" />'><c:out -->
+<!-- 																value="${interest.owner.username}" /></a>,  -->
+<!-- 													</c:if> -->
+<!-- 												</c:forEach> -->
+<!-- 												<br /> -->
+<!-- 													Compartieron esta publicación: -->
+<!-- 													<c:forEach var="interest" -->
+<!-- 													items="${pub.publication.interests}" varStatus="status"> -->
+<!-- 													<c:if test="${interest.type == 'SHARE'}"> -->
+<!-- 														<a -->
+<!-- 															href='<c:out value="profile?nickname=${interest.owner.username}" />'><c:out -->
+<!-- 																value="${interest.owner.username}" /></a>,  -->
+<!-- 														</c:if> -->
+<!-- 												</c:forEach> -->
+<!-- 											</c:if> -->
+											<br/>
+
+<!-- 											<table class="table"> -->
+<!-- 												<c:forEach var="comment" items="${pub.publication.comments}" -->
+<!-- 													varStatus="status"> -->
+<!-- 													<tr> -->
+<!-- 														<td>${comment.text} <br /> Comentado <kc:prettytime -->
+<!-- 																date="${pub.publication.date}"></kc:prettytime> por -->
+<!-- 															${comment.owner.username} <c:if test="${iscurrent}"> -->
+<!-- 																<form class="form pull-right" action="deleteComment" -->
+<!-- 																	method="post"> -->
+<!-- 																	<input type="hidden" class="btn-mini" name="nickname" -->
+<!-- 																		value='<c:out value="${user.username}"/>' /> <input -->
+<!-- 																		type="hidden" name="comment_id" -->
+<!-- 																		value='<c:out value="${comment.id}"/>' /> <input -->
+<!-- 																		type="hidden" name="pub_id" -->
+<!-- 																		value='<c:out value="${pub.publication.id}"/>' /> <input -->
+<!-- 																		type="submit" value="eliminar" /> -->
+<!-- 																</form> -->
+<!-- 															</c:if> -->
+<!-- 														</td> -->
+<!-- 													</tr> -->
+<!-- 												</c:forEach> -->
+<!-- 											</table> -->
+
+<!-- 											<form class="form pull-right" method="post" -->
+<!-- 												action="newComment"> -->
+<!-- 												<input type="hidden" name="nickname" -->
+<!-- 													value='<c:out value="${user.username}"/>' /> <input -->
+<!-- 													type="hidden" name="pub_id" -->
+<!-- 													value='<c:out value="${pub.publication.id}"/>' /> <input -->
+<!-- 													type="text" style="width: 470px" name="commenttext" /> <input -->
+<!-- 													type="submit" class="btn btn-primary btn-small" -->
+<!-- 													value="Comentar"> -->
+<!-- 											</form></td> -->
+									</p>
+	</wicket:panel>
+</body>
+</html>
