@@ -103,24 +103,25 @@
 						<!-- 						</c:if> -->
 						<br /> <br /> <br /> <br /> <br /> <br /> <br />
 						<h3>Amigos</h3>
-						<!-- 						<table class="table"> -->
-						<!-- 							<c:forEach var="friend" items="${friends}" varStatus="status"> -->
-						<!-- 								<hr> -->
-						<!-- 								<hd> <a -->
-						<!-- 									href='profile?nickname=<c:out value="${friend.username}" />'> -->
-						<!-- 									<c:out value="${friend.username}" /> -->
-						<!-- 								</a> <c:if test="${!friend.hasPhoto}"> -->
-						<!-- 									<img height="20" width="20" class="photo" -->
-						<!-- 										src="${ basePath }/../img/default.jpg" alt="default picture" /> -->
-						<!-- 								</c:if> <c:if test="${friend.hasPhoto}"> -->
-						<!-- 									<img class="img-circle" height="20" width="20" class="photo" -->
-						<!-- 										src="${ basePath }/user/photo?nickname=${friend.username}"> -->
+						<div wicket:id="friends"/>
 
-						<!-- 								</c:if> </hd> -->
-						<!-- 								</hr> -->
-						<!-- 							</c:forEach> -->
-						<!-- 						</table> -->
+								<!-- 						<table class="table"> -->
+								<!-- 							<c:forEach var="friend" items="${friends}" varStatus="status"> -->
+								<!-- 								<hr> -->
+								<!-- 								<hd> <a -->
+								<!-- 									href='profile?nickname=<c:out value="${friend.username}" />'> -->
+								<!-- 									<c:out value="${friend.username}" /> -->
+								<!-- 								</a> <c:if test="${!friend.hasPhoto}"> -->
+								<!-- 									<img height="20" width="20" class="photo" -->
+								<!-- 										src="${ basePath }/../img/default.jpg" alt="default picture" /> -->
+								<!-- 								</c:if> <c:if test="${friend.hasPhoto}"> -->
+								<!-- 									<img class="img-circle" height="20" width="20" class="photo" -->
+								<!-- 										src="${ basePath }/user/photo?nickname=${friend.username}"> -->
 
+								<!-- 								</c:if> </hd> -->
+								<!-- 								</hr> -->
+								<!-- 							</c:forEach> -->
+								<!-- 						</table> -->
 					</div>
 					<div class="span8">
 
@@ -134,16 +135,16 @@
 						<table class="table table-striped">
 							<tr>
 								<td><b><span class="infoTitle"> Apodo: </span></b></td>
-								<td wicket:id="username">apodo</td>
+								<td wicket:id="currentUserUsername">apodo</td>
 							</tr>
 							<!-- 							<c:if test="${isfriend}"> -->
 							<tr>
 								<td><b><span class="infoTitle">Email:</span></b></td>
-								<td wicket:id="email">email</td>
+								<td wicket:id="currentUserEmail">email</td>
 							</tr>
 							<tr>
 								<td><b><span class="infoTitle">Cumplea&ntilde;os:</span></b></td>
-								<td wicket:id="birthday">11/11/11</td>
+								<td wicket:id="currentUserBirthday">11/11/11</td>
 							</tr>
 							<!-- 							</c:if> -->
 						</table>
@@ -160,8 +161,7 @@
 						</button>
 						<button type="button" class="btn btn-mini btn-primary"
 							wicket:id="createevent">
-							<a href="#"><p style="color: white">Crear
-									Evento</p></a>
+							<a href="#"><p style="color: white">Crear Evento</p></a>
 						</button>
 						<!-- 						</c:if> -->
 
