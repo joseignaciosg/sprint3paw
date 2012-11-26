@@ -18,12 +18,11 @@ public class ProfilePage extends BasePage {
 		 //TODO determinar si es profile de amigo, de no amigo o propio
 		 String visibility = "public";
 		 
-		 if (visibility.equals("public")){
-			 add(new PublicProfilePanel("publicprofilepanel")); 
-		 }else if (visibility.equals("friend")){
+		 add(new PublicProfilePanel("publicprofilepanel")); //los paneles publicos siempre van
+		 
+		 if (visibility.equals("friend")){
 			 
 		 }else{ //own
-			 
 		 }
 	}
 }

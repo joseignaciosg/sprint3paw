@@ -26,16 +26,15 @@
 				</div>
 				<div class="span8">
 					<div class="page-header">
-						<h1>
-							<c:out value="${user.name}" />
-							<c:out value="${user.surname}" />
+						<h1 wicket:id="nameandsurname">
+							Nombre Apellido
 						</h1>
 					</div>
 					<h3>Informaci&oacuten</h3>
 					<table class="table table-striped">
 						<tr>
 							<td><b><span class="infoTitle"> Apodo: </span></b></td>
-							<td><c:out value="${user.username}" /></td>
+							<td><p wicket:id="username">apodo</p></td>
 						</tr>
 					</table>
 				</div>
